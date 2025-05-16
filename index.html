@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPulse Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SVG Loader -->
+    <div id="loader">
+        <svg viewBox="0 0 500 500" class="cpu-loader">
+            <rect x="200" y="200" width="100" height="100" class="cpu" />
+            
+            <!-- PCB Lines Group 1 -->
+            <path d="M200 220 L150 220 L150 100" class="pcb-line" />
+            <path d="M200 250 L100 250 L100 400" class="pcb-line" />
+            <path d="M220 300 L220 350 L300 350" class="pcb-line" />
+            
+            <!-- PCB Lines Group 2 -->
+            <path d="M300 200 L350 200 L350 150 L400 150" class="pcb-line" />
+            <path d="M300 250 L400 250 L400 300" class="pcb-line" />
+            <path d="M250 300 L250 400 L350 400" class="pcb-line" />
+            
+            <!-- Connection Dots -->
+            <circle cx="150" cy="100" r="5" class="connection-dot" />
+            <circle cx="100" cy="400" r="5" class="connection-dot" />
+            <circle cx="300" cy="350" r="5" class="connection-dot" />
+            <circle cx="400" cy="150" r="5" class="connection-dot" />
+            <circle cx="400" cy="300" r="5" class="connection-dot" />
+            <circle cx="350" cy="400" r="5" class="connection-dot" />
+        </svg>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 50 50" class="mini-cpu">
+                    <rect x="20" y="20" width="10" height="10" />
+                    <path d="M20 22 L15 22 L15 10" />
+                    <path d="M30 25 L40 25 L40 30" />
+                </svg>
+                <h1>TechPulse</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Latest in Tech</h2>
+                <p>Insights, reviews, and news from the cutting edge of technology</p>
+            </div>
+        </section>
+
+        <!-- Featured Articles (Home Page) -->
+        <section class="featured-articles">
+            <h2>Featured Articles</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/api/placeholder/600/400" alt="AI Development">
+                        <h3>AI Development Reaches New Milestone</h3>
+                    </div>
+                    <p>Researchers have achieved a breakthrough in large language model training, reducing computational requirements by 40%.</p>
+                    <a href="article1.html" class="read-more">Read More</a>
+                </article>
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/api/placeholder/600/400" alt="Quantum Computing">
+                        <h3>Quantum Computing: The Next Frontier</h3>
+                    </div>
+                    <p>How quantum computers are evolving from theoretical concepts to practical applications in cryptography and materials science.</p>
+                    <a href="article2.html" class="read-more">Read More</a>
+                </article>
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/api/placeholder/600/400" alt="Sustainable Tech">
+                        <h3>Sustainable Tech Solutions for 2025</h3>
+                    </div>
+                    <p>Exploring how technology companies are innovating to reduce carbon footprints and create environmentally friendly products.</p>
+                    <a href="article3.html" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for weekly tech insights</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletter-message"></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TechPulse</h2>
+                    <p>Your pulse on the tech world</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <span class="icon-twitter">Twitter</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span class="icon-linkedin">LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span class="icon-github">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechPulse. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" style="display: none;">
+        <section class="about-content">
+            <h2>About TechPulse</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="/api/placeholder/800/500" alt="TechPulse Team">
+                </div>
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>TechPulse was founded in 2023 with a simple mission: to provide clear, insightful, and accessible coverage of the rapidly evolving technology landscape. We believe technology should empower everyone, and our goal is to demystify complex tech topics for our readers.</p>
+                    
+                    <h3>Our Team</h3>
+                    <p>Our team consists of technology enthusiasts, industry veterans, and skilled writers who are passionate about staying at the forefront of technological advancements. With backgrounds spanning software development, hardware engineering, data science, and design, we bring diverse perspectives to our coverage.</p>
+                    
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li><strong>Accuracy:</strong> We verify facts and provide reliable information</li>
+                        <li><strong>Clarity:</strong> We explain complex topics in accessible language</li>
+                        <li><strong>Independence:</strong> Our coverage remains free from external influence</li>
+                        <li><strong>Innovation:</strong> We constantly explore new formats and platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" style="display: none;">
+        <section class="contact-content">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <p id="contact-message"></p>
+                </div>
+                <div class="contact-info">
+                    <h3>Our Information</h3>
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>info@techpulse.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Address</h4>
+                        <p>123 Tech Avenue<br>Innovation District<br>San Francisco, CA 94105</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">
+                                <span class="icon-twitter">Twitter</span>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <span class="icon-linkedin">LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <span class="icon-github">GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Article 1 Page -->
+    <div id="article1-page" style="display: none;">
+        <article class="full-article">
+            <div class="article-header">
+                <h1>AI Development Reaches New Milestone</h1>
+                <div class="article-meta">
+                    <span class="article-date">May 10, 2025</span>
+                    <span class="article-author">By Jane Tech</span>
+                </div>
+            </div>
+            <div class="article-featured-image">
+                <img src="/api/placeholder/1200/600" alt="AI Development">
+            </div>
+            <div class="article-content">
+                <p>In a groundbreaking development that promises to reshape the landscape of artificial intelligence, researchers at the Advanced Computational Institute have achieved a significant breakthrough in large language model training, reducing computational requirements by a staggering 40% while maintaining performance benchmarks.</p>
+                
+                <p>The research team, led by Dr. Sarah Chen, has developed a novel approach to training that they've dubbed "Selective Gradient Optimization" (SGO). This technique intelligently identifies the most important parameters to update during each training iteration, dramatically reducing the computational overhead without sacrificing model quality.</p>
+                
+                <h2>Technical Innovation</h2>
+                
+                <p>"The key insight was realizing that not all gradient updates contribute equally to model improvement," explains Dr. Chen. "By developing a mathematical framework to identify high-impact parameter updates, we can focus computational resources where they matter most."</p>
+                
+                <p>The implications of this breakthrough extend far beyond academic interest. By reducing the computational demands of AI training, the technology could democratize access to advanced AI capabilities, allowing smaller organizations and research institutions to develop sophisticated models without requiring massive computing infrastructure.</p>
+                
+                <h2>Environmental Impact</h2>
+                
+                <p>Beyond the technical achievements, the environmental implications are substantial. AI training has been criticized for its enormous energy consumption and resulting carbon footprint. The SGO approach could reduce the environmental impact of AI development by nearly half.</p>
+                
+                <p>"We estimate that if widely adopted, this methodology could save the equivalent of a small country's annual electricity usage," notes environmental technologist Rafael Mendes, who was not involved in the research but has reviewed the findings.</p>
+                
+                <h2>Industry Response</h2>
+                
+                <p>The technology sector has responded enthusiastically to the announcement. Major AI research labs have already expressed interest in implementing the technique in their training pipelines.</p>
+                
+                <p>"This could be the most significant advancement in training efficiency we've seen in the past five years," comments Maria Vasquez, AI Research Director at TechFuture Industries. "We're already planning to integrate these methods into our next generation of models."</p>
+                
+                <h2>What's Next</h2>
+                
+                <p>The research team is now focusing on extending the approach to other types of deep learning models beyond language processing. They're also working on releasing an open-source implementation of their methods to accelerate adoption across the AI community.</p>
+                
+                <p>With this development, we may be witnessing the beginning of a new era in AI research – one where efficiency and environmental responsibility become as important as raw performance metrics.</p>
+            </div>
+        </article>
+    </div>
+
+    <!-- Article 2 Page -->
+    <div id="article2-page" style="display: none;">
+        <article class="full-article">
+            <div class="article-header">
+                <h1>Quantum Computing: The Next Frontier</h1>
+                <div class="article-meta">
+                    <span class="article-date">May 12, 2025</span>
+                    <span class="article-author">By Alex Quantum</span>
+                </div>
+            </div>
+            <div class="article-featured-image">
+                <img src="/api/placeholder/1200/600" alt="Quantum Computing">
+            </div>
+            <div class="article-content">
+                <p>Quantum computing has long been heralded as the next revolutionary leap in computational technology, promising to solve problems that would take traditional computers thousands of years in mere minutes. After decades of theoretical work and laboratory prototypes, quantum computers are finally beginning to transition from research curiosities to practical tools with real-world applications.</p>
+                
+                <h2>Beyond Theoretical Concepts</h2>
+                
+                <p>The past year has witnessed several critical milestones in quantum computing development. Most notably, QuantumWave Technologies announced they had achieved reliable 100-qubit operation with error correction sufficient for practical applications. This represents a significant breakthrough in addressing the field's most persistent challenge: maintaining quantum coherence long enough to perform meaningful calculations.</p>
+                
+                <p>"We've crossed a threshold where quantum computers can now tackle specific problems better than any classical computer," explains Dr. Rebecca Cho, Chief Quantum Officer at QuantumWave. "While we're not yet at the point of 'quantum supremacy' across all applications, we're seeing definitive advantages in targeted domains."</p>
+                
+                <h2>Practical Applications Emerging</h2>
+                
+                <p>Cryptography and materials science have emerged as the first fields to benefit from quantum computing's unique capabilities.</p>
+                
+                <p>In cryptography, post-quantum security protocols are being developed to withstand future quantum attacks on current encryption standards. Simultaneously, quantum computers are being used to develop and test these very same security measures, creating a fascinating technological arms race.</p>
+                
+                <p>In materials science, researchers have used quantum simulations to model complex molecular interactions with unprecedented accuracy. This has already led to breakthroughs in catalyst design for more efficient carbon capture technologies and advanced battery materials with higher energy densities.</p>
+                
+                <h2>Industry Adoption Accelerating</h2>
+                
+                <p>Major technology companies and specialized startups alike are racing to develop quantum computing hardware and software. Industry analysts predict the quantum computing market will grow from approximately $1.1 billion in 2024 to over $5 billion by 2028.</p>
+                
+                <p>Financial institutions have been particularly eager adopters, using quantum algorithms for portfolio optimization and risk assessment models. Pharmaceutical companies are leveraging quantum computing for drug discovery, significantly accelerating the identification of promising molecular compounds.</p>
+                
+                <h2>The Road Ahead</h2>
+                
+                <p>Despite these advances, significant challenges remain. Quantum computers still require extreme cooling systems and specialized environments. Building quantum computers that can operate at higher temperatures remains a major research goal that would dramatically reduce operational costs and complexity.</p>
+                
+                <p>"We're currently in what might be called the 'quantum ENIAC' era, referring to the first electronic general-purpose computer," notes quantum computing historian Dr. James Liu. "These machines are powerful but specialized and expensive. The equivalent of the personal computer revolution for quantum computing is still years away, but the foundation is being built now."</p>
+                
+                <p>As quantum computing continues its evolution from theoretical concept to practical technology, it promises to unlock capabilities previously confined to the realm of science fiction. The quantum frontier is no longer on the horizon—we've begun to explore it.</p>
+            </div>
+        </article>
+    </div>
+
+    <!-- Article 3 Page -->
+    <div id="article3-page" style="display: none;">
+        <article class="full-article">
+            <div class="article-header">
+                <h1>Sustainable Tech Solutions for 2025</h1>
+                <div class="article-meta">
+                    <span class="article-date">May 15, 2025</span>
+                    <span class="article-author">By Eco Tech</span>
+                </div>
+            </div>
+            <div class="article-featured-image">
+                <img src="/api/placeholder/1200/600" alt="Sustainable Tech">
+            </div>
+            <div class="article-content">
+                <p>As environmental concerns continue to mount, technology companies are increasingly focusing on sustainable solutions that reduce environmental impact while maintaining technological progress. The tech industry, once criticized for its significant carbon footprint, is now leading innovative approaches to sustainability that are reshaping how products are designed, manufactured, and recycled.</p>
+                
+                <h2>Circular Design Philosophy</h2>
+                
+                <p>Leading manufacturers have embraced circular design principles, creating products specifically engineered for disassembly and recycling. This approach represents a fundamental shift from the traditional linear "take-make-dispose" model to one where materials are continuously recovered and reused.</p>
+                
+                <p>"We've redesigned our entire product line with modularity at its core," explains Lin Wei, Chief Sustainability Officer at GreenTech Electronics. "Consumers can upgrade individual components rather than replacing entire devices, and when components do reach end-of-life, we can recover over 95% of materials for reuse."</p>
+                
+                <p>This shift is evident in the latest generation of smartphones and laptops, which increasingly feature user-replaceable batteries, standardized parts, and materials selected specifically for their recyclability.</p>
+                
+                <h2>Energy-Efficient Computing</h2>
+                
+                <p>With data centers accounting for an estimated 1% of global electricity consumption, energy efficiency has become a critical focus area. The latest server architectures incorporate specialized AI chips that dynamically allocate computing resources based on demand, reducing power consumption by up to 60% compared to previous generations.</p>
+                
+                <p>Cloud providers have also made ambitious commitments to renewable energy. "Our newest data centers are not just carbon-neutral but carbon-negative," states Maya Rodriguez, Director of Infrastructure at CloudSphere. "Through a combination of on-site renewable generation, careful site selection for natural cooling, and carbon capture investments, we're actually removing more carbon from the atmosphere than we emit."</p>
+                
+                <h2>Sustainable Materials Innovation</h2>
+                
+                <p>The search for sustainable alternatives to traditional materials has yielded remarkable innovations. Bioplastics derived from algae and agricultural waste are increasingly replacing petroleum-based plastics in device housings and packaging. These materials not only reduce fossil fuel dependence but are also biodegradable or more easily recyclable.</p>
+                
+                <p>Perhaps most exciting is the development of electronic components using organic and biodegradable substrates. Researchers at the Sustainable Electronics Institute have demonstrated working transistors and circuit boards that naturally decompose at end-of-life, potentially eliminating the problem of electronic waste.</p>
+                
+                <h2>AI-Driven Sustainability</h2>
+                
+                <p>Artificial intelligence is playing a crucial role in optimizing resource use across the technology lifecycle. From AI systems that identify inefficiencies in manufacturing processes to algorithms that maximize the energy efficiency of devices in real-time, machine learning is becoming an essential tool in the sustainability toolkit.</p>
+                
+                <p>"We're using AI to analyze and optimize every aspect of our operations," explains Dr. Kwame Osei, founder of EcoLogic Systems. "Our algorithms have identified patterns and improvement opportunities that would have taken humans years to discover."</p>
+                
+                <h2>The Path Forward</h2>
+                
+                <p>While significant progress has been made, challenges remain. The growing demand for technology globally continues to drive overall resource consumption, even as individual devices become more efficient. Additionally, new technologies like artificial intelligence and virtual reality bring their own energy demands.</p>
+                
+                <p>However, the industry's increasing commitment to sustainability, coupled with consumer demand for environmentally responsible products, suggests that the trend toward greener technology will continue to accelerate. As we move through 2025, the most successful technology companies may well be those that can deliver both cutting-edge capabilities and environmental responsibility.</p>
+            </div>
+        </article>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
